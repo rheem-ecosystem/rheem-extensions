@@ -5,35 +5,44 @@
         <groupId>io.rheem</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rheem-iejoin_2.11</artifactId>
+    <artifactId>rheem-iejoin</artifactId>
     <packaging>jar</packaging>
+
+    <properties>
+        <rheem.core.version>1.0.0-SNAPSHOT</rheem.core.version>
+        <rheem.java.version>1.0.0-SNAPSHOT</rheem.java.version>
+        <rheem.spark.version>1.0.0-SNAPSHOT</rheem.spark.version>
+        <spark.version>2.4.0</spark.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.rheem</groupId>
             <artifactId>rheem-core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${rheem.core.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rheem</groupId>
             <artifactId>rheem-basic</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${rheem.core.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rheem</groupId>
             <artifactId>rheem-java</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${rheem.java.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rheem</groupId>
             <artifactId>rheem-spark_2.11</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${rheem.spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_${scala.compat.version}</artifactId>
+            <artifactId>spark-core_${scala.mayor.version}</artifactId>
+            <version>${spark.version}</version>
         </dependency>
     </dependencies>
 
